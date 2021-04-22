@@ -1,0 +1,522 @@
+<html>
+<head>
+               <title></title>
+
+               <!-- CSS only -->
+               <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+               <!-- JavaScript Bundle with Popper -->
+               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+               <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+               <!-- Google Fonts -->
+               <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+               <!-- Bootstrap core CSS -->
+               <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+               <!-- Material Design Bootstrap -->
+               <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+               <!-- JQuery -->
+               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+               <!-- Bootstrap tooltips -->
+               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+               <!-- Bootstrap core JavaScript -->
+               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+               <!-- MDB core JavaScript -->
+               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+       </head>
+<style>
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+html,body,header,#intro-section
+{
+      height: 100%;
+      position:relative;
+}
+@media (max-width: 740px)
+{
+    html,body,header,#intro-section
+    {
+          height: 100vh;
+    }
+}
+.bg
+{
+       height: 100%;
+	     width:100%;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+	     position: relative;
+   	   display: flex;
+    	 align-items: center;
+    	 justify-content: center;
+}
+.bg::before
+{
+      content: "";
+      background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/10/material-minimalist-4k_1539371343.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.6;
+}
+h1 h3{
+  position: relative;
+  color: black;
+}
+
+
+div.container1
+{
+    font-family: Raleway;
+	padding: 1em ;
+}
+
+div.container1 a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 15px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+.navbg
+{
+    background: #11a8a3;
+}
+
+div.borderXwidth a:before, div.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+div.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+table,th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse:collapse;
+}
+th {
+  background-color: #015154;
+  color: white;
+}
+.t1 tr:nth-child(even) {background-color: #e6ccc3;}
+.t1 tr:nth-child(odd) {background-color:#f0e8e1;}
+
+
+    .friends{
+	position:relative;
+	width:80%;
+	top:10%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	left:0%;
+	height:20%;
+}
+.profile-name{
+	position:absolute;
+	top:0%;
+	left:15%;
+}
+figure{
+  position: relative;
+  left: 250px;
+  width:700px;
+  height:60px;
+  cursor:pointer;
+  perspective:500px;
+  -webkit-perspective:500px;
+}
+figure div{
+  height:100%;
+  width:100%;
+  transform-style:preserve-3d;
+  -webkit-transform-style:preserve-3d;
+  transition:0.25s;
+  -webkit-transition:0.25s;
+}
+figure:hover div{transform:rotateX(-90deg);}
+span{
+  width:100%;
+  height:100%;
+  position:absolute;
+  box-sizing:border-box;
+  border:5px solid black;
+  font-family:'Source Sans Pro',sans-serif;
+  line-height:50px;
+  font-size:17pt;
+  text-align:center;
+  text-transform:uppercase;
+}
+span:nth-child(1){
+  color:#000;
+  background:#64e4e8;
+  width:100%;
+  transform: translate3d(0, 0, 30px);
+  -webkit-transform: translate3d(0, 0, 30px);
+}
+span:nth-child(2){
+  color:white;
+  background:#096375;
+  transform: rotateX(90deg) translate3d(0, 0, 30px);
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
+}
+    .box{
+        height:300px;
+        float:left;
+        overflow: hidden;
+        background: #f0e68c;
+        display:none;
+    }
+    .box-inner{
+        width: 700px;
+        padding: 20px;
+      }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".slide-toggle").click(function(){
+            $(".box").animate({
+                width: "toggle"
+            });
+            if($('.comm').css("margin-top")=="300px"){
+              $('.comm').css("margin-top","10px");
+            }else{
+              $('.comm').css("margin-top","300px");
+          }
+        });
+    });
+</script>
+    <body  data-spy="scroll"  data-offset="50">
+      <div class="container1 navbg borderXwidth fixed-top">
+        <a href="#about">ABOUT</a>
+        <a href="#syllabus">SYLLABUS</a>
+        <a href="#faculty">FACULTY</a>
+        <a href="#project">PROJECT IDEAS</a>
+        <a href="#tips">TIPS</a>
+        <a href="#feedback">COMMENTS</a>
+      </div>
+      <main>
+      <section>
+              <div class="view" id="intro-section">
+              <div class="bg" id="intro-section">
+      	         <div class="container">
+      		 	<div class="content" style="position:relative;left:350px;top:60px;">
+      		           	<h1 class="text-center" style="font-family:'roboto';">Internet Web Programming</h1><br>
+                      <h3 class="text-center" style="font-family:'roboto';">CSE3002</h3>
+
+      			</div>
+      	         </div>
+      	       </div>
+              </div>
+      </section>
+      </main>
+
+<!--About the course-->
+      <section id="about" class="py-5">
+              <div class="container">
+                      <h2 class="h1-responsive font-weight-bold text-center mb-5" style="font-family:'century gothic'">About</h2>
+                      <p class="lead grey-text text-center w-responsive mx-auto mb-5">Interested to learn how to create a website like this? Check out this course.</p>
+                      <div class="row">
+                              <div class="col-lg-6 text-center text-lg-left">
+                                      <img class="img-fluid" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200203200336/13-Things-You-Should-Know-Before-You-Enter-In-Web-Development.png" alt="Sample image">
+                              </div>
+                              <div class="col-lg-6">
+                                    <p>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses, and social network services.</p>
+                                    <p>Web development skills are in high demand worldwide and well paid too – making development a great career option. It is one of the easiest accessible higher paid fields as you do not need a traditional university degree to become qualified.</p>
+                                    <p> In this course you will learn how to create a website using HTML, CSS, JavaScript, jQuery, JSON, PHP, AJAX, XML, XSL, NodeJS, MongoDB.</p>
+                                    <p><b>Pre-requisite: <i>None</i></b></p>
+                                </div>
+                      </div>
+              </div>
+        </section>
+
+  <!--Syllubus-->
+        <section id="syllabus" class="py-5" style="background-color:#d5f2ea;">
+                <div class="container">
+                        <h2 class="h1-responsive font-weight-bold text-center mb-4" style="font-family:'century gothic'">Syllabus</h2>
+                        <p class="lead grey-text text-center w-responsive mx-auto mb-4">The syllubus of this course is given below.</p>
+                        <h4 class="font-weight-bold text-center">Credits(L-T-P-J): 2-0-2-4<br> Total: 4 Credits</h4><br>
+                        <table align="center" border="1" class="t1">
+                          <tr>
+                          	<th>S.no.</th>
+                          	<th style="width:24%;">Module</th>
+                          	<th>Description</th>
+                          	<th>Duration</th>
+                          </tr>
+                          <tr>
+                          	<td>1</td>
+                          	<td>Introduction to internet</td>
+                          	<td>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses, and social network services.</td>
+                          	<td>2 hrs</td>
+                          </tr>
+                          <tr>
+                          	<td>2</td>
+                          	<td>Introduction to internet</td>
+                          	<td>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses, and social network services.</td>
+                          	<td>2 hrs</td>
+                          </tr>
+                          <tr>
+                          	<td>3</td>
+                          	<td>Introduction to internet</td>
+                          	<td>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses, and social network services.</td>
+                          	<td>2 hrs</td>
+                          </tr>
+                          <tr>
+                          	<td>4</td>
+                          	<td>Introduction to internet</td>
+                          	<td>Web development is the work involved in developing a Web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex Web-based Internet applications, electronic businesses, and social network services.</td>
+                          	<td>2 hrs</td>
+                          </tr>
+                        </table>
+
+
+                </div>
+          </section>
+
+          <!--Faculty-->
+                <section id="faculty" class="py-5">
+                        <div class="container">
+                                <h2 class="h1-responsive font-weight-bold text-center mb-5" style="font-family:'century gothic'">Faculty</h2>
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <center>
+                                        <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/219/219971.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/R3e4af0acbc1aabaf026aa2cf9fb8c123?rik=ReEUGC2zT3sxEg&riu=http%3a%2f%2fimage.flaticon.com%2ficons%2fpng%2f512%2f219%2f219970.png&ehk=ooUPb%2fhoqud1zOI%2bnxRhB91Kf8RHObYTvVFGUOOqvko%3d&risl=&pid=ImgRaw" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title2</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.P2aX1GoIQ59PuB4oZrkc8AHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title 3</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+  </div>
+
+                                        <p></p>
+                                    </center>
+                                    </div>
+                                    <div class="carousel-item">
+                                      <center>
+                                        <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://bilims.com/v4/assets/img/members/semih.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.YpinPPXM-K8S2HF6xVBsFAHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title2</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.4Mr1qmECe8FgxUtKN2Xb8wHaHa?pid=ImgDet&rs=1" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title 3</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+  </div>
+
+                                        <p></p>
+                                    </center>                                   </div>
+                                    <div class="carousel-item">
+                                      <center>
+                                        <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.edumate.com.au/wp-content/themes/edumate/images/icons/icon-parents.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.tandsadvertising.co.uk/wp-content/uploads/2015/05/darren-hart.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title2</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.-XeHzwueYsw_Qh__eBuJ-gHaHa?pid=ImgDet&w=512&h=512&rs=1" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title 3</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>    </div>
+  </div>
+
+                                        <p></p>
+                                    </center>
+                                    </div>
+                                  </div>
+                                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <b style="font-size:100px;color:black;margin-right:300px;"><</b>
+                                  </a>
+                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <b style="font-size:100px;color:black;margin-left:300px;">></b>
+                                </a>
+                                </div>
+                          </div>
+                  </section>
+
+                  <!--Project ideas-->
+                  <section id="project" class="text-center py-5" style="background-color:#d5f2ea;">
+                          <div class="container">
+                                  <h2 class="h1-responsive font-weight-bold mb-5" >Project Ideas</h2>
+                                  <p class="grey-text w-responsive mx-auto mb-5">Some of the best project ideas for this course is given below.</p>
+                                  <div class="row text-center">
+                                          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                                                  <div class="view overlay rounded z-depth-1">
+                                                          <img src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" class="img-fluid" alt="Sample project image">
+                                                          <a>
+                                                                  <div class="mask rgba-white-slight"></div>
+                                                          </a>
+                                                  </div>
+                                                  <div class="card-body pb-0">
+                                                          <h4 class="font-weight-bold my-3">Project 1</h4>
+                                                          <p class="grey-text">Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                                                  necessitatibus saepe eveniet ut et voluptates repudiandae.
+                                                          </p>
+                                                          <a class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> View project</a>
+                                                  </div>
+                                          </div>
+                                          <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                                                  <div class="view overlay rounded z-depth-1">
+                                                          <img src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" class="img-fluid" alt="Sample project image">
+                                                          <a>
+                                                                  <div class="mask rgba-white-slight"></div>
+                                                          </a>
+                                                  </div>
+                                                  <div class="card-body pb-0">
+                                                          <h4 class="font-weight-bold my-3">Project 2</h4>
+                                                          <p class="grey-text">Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                                                  necessitatibus saepe eveniet ut et voluptates repudiandae.
+                                                          </p>
+                                                          <a class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> View project</a>
+                                                  </div>
+                                          </div>
+                                          <div class="col-lg-4 col-md-6">
+                                                  <div class="view overlay rounded z-depth-1">
+                                                          <img src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" class="img-fluid" alt="Sample project image">
+                                                          <a>
+                                                                  <div class="mask rgba-white-slight"></div>
+                                                          </a>
+                                                  </div>
+                                                  <div class="card-body pb-0">
+                                                          <h4 class="font-weight-bold my-3">Project 3</h4>
+                                                          <p class="grey-text">Temporibus autem quibusdam et aut officiis debitis aut rerum
+                                                                  necessitatibus saepe eveniet ut et voluptates repudiandae.
+                                                          </p>
+                                                          <a class="btn btn-purple btn-sm"><i class="fa fa-clone left"></i> View project</a>
+                                                  </div>
+                                          </div>
+                                  </div>
+                          </div>
+                  </section>
+
+
+                  <!--Tips course-->
+                        <section id="tips" class="py-5 tips">
+                                <div class="container">
+                                        <h2 class="h1-responsive font-weight-bold text-center mb-5" style="font-family:'century gothic'">Tips</h2>
+                                        <p class="lead grey-text text-center w-responsive mx-auto mb-5">Some useful tips for you regarding the course!...Enjoy!</p>
+                                        <figure>
+                                            <div>
+                                              <span style="margin-left:-30px;">Want some tips?</span>
+                                              <span style="margin-left:-30px;" class="slide-toggle">Click me to see some exciting tips :)</span>
+                                            </div>
+                                        </figure>
+                                        <div class="box">
+                                          <div class="row">
+                                              <div class="col-lg-4 text-center text-lg-left">
+                                                      <img class="img-fluid" src="https://image.freepik.com/free-vector/helpful-tips_23-2148169712.jpg" alt="Sample image">
+                                              </div>
+                                              <div class="col-lg-8">
+                                                  <div class="box-inner">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                          </section>
+
+
+
+          <div class="comm" style="margin-top:10px;transition:.5s">
+            <center>	<div class="friends">
+            </div></center>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+
+    </body>
+</html>
